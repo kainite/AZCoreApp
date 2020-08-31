@@ -5,24 +5,25 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to My Movie Library</h1>    
+    <img src="https://yt3.ggpht.com/a/AATXAJxWVfGjxxoL11FjDbcOSRiDGJf26E__oHgx8zeHgqk=s100-c-k-c0xffffffff-no-rj-mo">
+    <h1 class="display-4">Welcome to My Movie Library</h1>
 </div>
 
 <a asp-page="./Create">Create new Movie</a></br>
 <table class="table">
-    @foreach(var Movie in Model.Movieobj)
+    @foreach (var Movie in Model.Movieobj)
     {
-    <tr>
-        <td>@Movie.Id</td>
-        <td>@Movie.Name</td>
-        <td><a href="@Movie.Link" target="_blank">Visit</a></td>
-        <td>
-            <a asp-page="./Details" asp-route-Id="@Movie.Id">Details</a>
-        </td>
-        <td>
-            <a asp-page="./Edit" asp-route-Id="@Movie.Id">Edit</a>
-        </td>
-    </tr>
+        <tr>
+            <td>@Movie.Id</td>
+            <td>@Movie.Name</td>
+            <td><a href="@Movie.Link" target="_blank">Visit</a></td>
+            <td>
+                <a asp-page="./Details" asp-route-Id="@Movie.Id">Details</a>
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-Id="@Movie.Id">Edit</a>
+            </td>
+        </tr>
     }
 </table>
 
