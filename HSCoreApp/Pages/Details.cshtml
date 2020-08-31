@@ -1,0 +1,14 @@
+﻿@page
+@model HSCoreApp.Pages.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>This is the details of the Movie</h1>
+<div>
+    The id of the Movie is @Model.obj.Id</br>
+    The name of the Movie is @Model.obj.Name</br>
+    The link of the Movie is @Model.obj.Link</br>
+</div>
+<a asp-page="./Index">Going back to the Index page</a>
+
